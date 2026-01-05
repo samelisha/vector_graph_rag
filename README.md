@@ -21,6 +21,29 @@ Key features
 Quickstart
 ----------
 Requirements
+# vector_graph_rag
+
+Email Policy Assistant — Local Vector + Graph RAG
+
+Overview
+--------
+`vector_graph_rag` is an offline, email-driven policy assistant that
+processes incoming Gmail messages and answers policy questions using a
+local knowledge base. It combines vector retrieval (FAISS) with a
+policy graph for neighborhood expansion and runs on local LLMs (via
+Ollama) without relying on paid cloud APIs.
+
+Key features
+------------
+- Gmail IMAP listener and automatic replies
+- Local LLM support (Ollama models such as Qwen / Mistral)
+- Hybrid Vector + Graph RAG retrieval with source citations
+- Cross-document synthesis and confidence scoring
+- Incremental KB rebuild support
+
+Quickstart
+----------
+Requirements
 - Python 3.9+
 - macOS or Linux recommended
 - Ollama installed and a pulled model (example: `qwen2.5:3b`)
@@ -53,6 +76,7 @@ Project structure
 -----------------
 At a glance:
 
+```text
 .
 ├── kb/                       # Markdown knowledge base files
 ├── faiss_store/              # Persisted vector & graph index
@@ -63,6 +87,7 @@ At a glance:
 ├── mailer.py                 # SMTP sending utility
 ├── config.py                 # Configuration and constants
 └── requirements.txt
+```
 
 Data files
 ----------
