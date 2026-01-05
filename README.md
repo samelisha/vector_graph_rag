@@ -116,16 +116,69 @@ Architecture (brief)
 - Graph JSON links policy entities and supports neighborhood expansion
 - Local LLM (Ollama) performs answer synthesis and re-ranking
 
+Architecture diagram
+--------------------
+```mermaid
+flowchart TD
+
+subgraph Email_System
+U[User Email Client]
+Gmail[(Gmail Inbox)]
+end
+
+subgraph Agent
+L[Email Listener - IMAP Poller]
+P[Preprocessor - extract question]
+A[Answer Engine]
+M[Mailer - SMTP Sender]
+end
+
+subgraph Retrieval_Layer
+R1[Vector Retriever - FAISS]
+C1[Chunk Clustering - KMeans]
+G1[Graph Neighborhood Retrieval]
+F[Evidence Filter and Reranker]
+end
+
+subgraph Knowledge_Base
+KBD[Markdown Policy Files - kb folder]
+ING[Ingestion Pipeline]
+VDB[(FAISS Vector Store)]
+GRAPH[(Policy Graph JSON)]
+end
+
+subgraph Models
+EMB[Sentence Transformer Embeddings]
+LLM[Local LLM via Ollama]
+end
+
+U -->|Sends Email| Gmail
+Gmail --> L
+L --> P
+P --> A
+
+A -->|query| Retrieval_Layer
+A -->|generate answer| LLM
+
+KBD --> ING
+ING --> EMB
+ING --> VDB
+ING --> GRAPH
+
+R1 --> C1 --> G1 --> F --> A
+
+Retrieval_Layer -->|Top Relevant Chunks| A
+A --> M
+M -->|Reply Email| U
+
+```
+
 Contributing
 ------------
 - Add or update policy pages in `kb/` (Markdown).
 - Rebuild index with `python ingest_kb.py` after changes.
 - Open issues or PRs for improvements.
 
-License & Contact
------------------
-This repository does not include an explicit license file; add one
-if you plan to publish. For questions, open an issue or contact the
-maintainer listed in the repo.
+
 
 
