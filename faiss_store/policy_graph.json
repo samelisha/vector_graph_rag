@@ -1,0 +1,206 @@
+[
+  {
+    "file": "billing_faq.md",
+    "subject": "Invoices are generated",
+    "relation": "at the start of each billing cycle",
+    "object": "available for download from the account dashboard"
+  },
+  {
+    "file": "billing_faq.md",
+    "subject": "Invoices can be downloaded",
+    "relation": "in PDF format",
+    "object": "from the Billing → Invoices section"
+  },
+  {
+    "file": "billing_faq.md",
+    "subject": "If payment fails",
+    "relation": "an automated email notification is received",
+    "object": "payment retried up to 3 times over 7 days"
+  },
+  {
+    "file": "billing_faq.md",
+    "subject": "Payment methods supported",
+    "relation": "major credit cards, some debit cards, and select digital wallets",
+    "object": "depending on country of residence"
+  },
+  {
+    "file": "proration_policy.md",
+    "subject": "Plan Upgrades",
+    "relation": "calculate",
+    "object": "proration credits"
+  },
+  {
+    "file": "proration_policy.md",
+    "subject": "Plan Downgrades",
+    "relation": "no refunds",
+    "object": "unused time"
+  },
+  {
+    "file": "proration_policy.md",
+    "subject": "Add-Ons",
+    "relation": "prorate",
+    "object": "remaining time"
+  },
+  {
+    "file": "proration_policy.md",
+    "subject": "Billing Display",
+    "relation": "show as",
+    "object": "credits or partial charges"
+  },
+  {
+    "file": "subscription_terms.md",
+    "subject": "Subscriptions renew automatically",
+    "relation": "use",
+    "object": "default payment method"
+  },
+  {
+    "file": "subscription_terms.md",
+    "subject": "Users are notified by email",
+    "relation": "frequency",
+    "object": "7 days"
+  },
+  {
+    "file": "subscription_terms.md",
+    "subject": "Billing cycle varies",
+    "relation": "based on",
+    "object": "selected plan"
+  },
+  {
+    "file": "subscription_terms.md",
+    "subject": "Grace period applies",
+    "relation": "duration",
+    "object": "3 days"
+  },
+  {
+    "file": "subscription_terms.md",
+    "subject": "Subscription status marked as Active",
+    "relation": "required for",
+    "object": "access to services"
+  },
+  {
+    "file": "subscription_terms.md",
+    "subject": "Accounts in Suspended or Cancelled status",
+    "relation": "lose access to",
+    "object": "premium features"
+  },
+  {
+    "file": "account_management.md",
+    "subject": "Updating Email Address",
+    "relation": "from",
+    "object": "Profile Settings"
+  },
+  {
+    "file": "account_management.md",
+    "subject": "Deleting an Account",
+    "relation": "after",
+    "object": "30-day waiting period"
+  },
+  {
+    "file": "account_management.md",
+    "subject": "Reopening a Deleted Account",
+    "relation": "not possible",
+    "object": "reopening"
+  },
+  {
+    "file": "refund_policy.md",
+    "subject": "Refund Eligibility",
+    "relation": "for charges incurred within the past 7 calendar days",
+    "object": ""
+  },
+  {
+    "file": "refund_policy.md",
+    "subject": "Processing Time",
+    "relation": "Refund processing takes between 5 and 10 business days depending on the payment provider.",
+    "object": ""
+  },
+  {
+    "file": "refund_policy.md",
+    "subject": "Partial Refunds",
+    "relation": "provided in cases of service interruption, duplicate billing, or documented technical issues preventing usage.",
+    "object": ""
+  },
+  {
+    "file": "refund_policy.md",
+    "subject": "Non-Refundable Items",
+    "relation": "promotional plans - discounted annual plans after 30 days - one-time setup fees",
+    "object": ""
+  },
+  {
+    "file": "refund_policy.md",
+    "subject": "How to Request a Refund",
+    "relation": "contact Support through the Help Center or open a billing ticket within the account dashboard.",
+    "object": ""
+  },
+  {
+    "file": "refund_policy.md",
+    "subject": "Chargebacks",
+    "relation": "subscription will be suspended while the dispute is investigated.",
+    "object": ""
+  },
+  {
+    "file": "trial_policy.md",
+    "subject": "Free Trial Policy",
+    "relation": "Duration",
+    "object": "14 days"
+  },
+  {
+    "file": "trial_policy.md",
+    "subject": "Trial Conversion",
+    "relation": "Account",
+    "object": "Automatically converts to paid subscription"
+  },
+  {
+    "file": "trial_policy.md",
+    "subject": "Trial Limitations",
+    "relation": "Features",
+    "object": "Limited during trial period"
+  },
+  {
+    "file": "trial_policy.md",
+    "subject": "Credit Card Requirement",
+    "relation": "Payment Method",
+    "object": "Valid payment required"
+  },
+  {
+    "file": "trial_policy.md",
+    "subject": "Abuse Prevention",
+    "relation": "Creation",
+    "object": "Multiple trials for same user results in termination"
+  },
+  {
+    "file": "cancellation_policy.md",
+    "subject": "Billing section",
+    "relation": "contains",
+    "object": "Cancellation Policy"
+  },
+  {
+    "file": "cancellation_policy.md",
+    "subject": "Effective Date",
+    "relation": "applies_to",
+    "object": "Cancellation"
+  },
+  {
+    "file": "cancellation_policy.md",
+    "subject": "Immediate Cancellation",
+    "relation": "available_in",
+    "object": "Certain regions"
+  },
+  {
+    "file": "cancellation_policy.md",
+    "subject": "Cancellation After Renewal",
+    "relation": "affects",
+    "object": "Subscription"
+  },
+  {
+    "file": "cancellation_policy.md",
+    "subject": "Proof of Cancellation",
+    "relation": "sent_to",
+    "object": "Account email"
+  },
+  {
+    "file": "cancellation_policy.md",
+    "subject": "We reserve the right",
+    "relation": "cancels_accounts",
+    "object": "That violate terms"
+  }
+]
