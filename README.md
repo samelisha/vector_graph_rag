@@ -119,57 +119,68 @@ Architecture (brief)
 Architecture diagram
 --------------------
 ```mermaid
-flowchart TD
+flowchart LR
 
+%% USER & EMAIL
 subgraph Email_System
 U[User Email Client]
 Gmail[(Gmail Inbox)]
 end
 
+%% AGENT
 subgraph Agent
 L[Email Listener - IMAP Poller]
 P[Preprocessor - extract question]
-A[Answer Engine]
+AE[Answer Engine]
 M[Mailer - SMTP Sender]
 end
 
+%% RETRIEVAL
 subgraph Retrieval_Layer
-R1[Vector Retriever - FAISS]
-C1[Chunk Clustering - KMeans]
-G1[Graph Neighborhood Retrieval]
-F[Evidence Filter and Reranker]
+VR[Vector Retriever - FAISS]
+CL[Chunk Clustering - KMeans]
+GN[Graph Neighborhood Retrieval]
+RF[Evidence Filter and Reranker]
 end
 
+%% KNOWLEDGE BASE
 subgraph Knowledge_Base
 KBD[Markdown Policy Files - kb folder]
 ING[Ingestion Pipeline]
 VDB[(FAISS Vector Store)]
-GRAPH[(Policy Graph JSON)]
+PG[(Policy Graph JSON)]
 end
 
+%% MODELS
 subgraph Models
 EMB[Sentence Transformer Embeddings]
 LLM[Local LLM via Ollama]
 end
 
-U -->|Sends Email| Gmail
-Gmail --> L
-L --> P
-P --> A
 
-A -->|query| Retrieval_Layer
-A -->|generate answer| LLM
+%% EMAIL FLOW
+U --> Gmail --> L --> P --> AE
 
+%% RETRIEVAL FLOW
+AE -->|query| VR
+VR --> CL --> GN --> RF -->|top chunks| AE
+
+%% ANSWER GENERATION
+AE -->|generate answer| LLM --> AE
+AE --> M -->|reply email| U
+
+%% KB INGESTION
 KBD --> ING
-ING --> EMB
 ING --> VDB
-ING --> GRAPH
+ING --> PG
 
-R1 --> C1 --> G1 --> F --> A
+%% MODEL CONNECTIONS (MADE EXPLICIT)
+ING -->|embedding generation| EMB
+AE -->|answer synthesis| LLM
 
-Retrieval_Layer -->|Top Relevant Chunks| A
-A --> M
-M -->|Reply Email| U
+%% KB TO RETRIEVAL
+VR --- VDB
+GN --- PG
 
 ```
 
